@@ -1,7 +1,7 @@
 const AccountsService = require("./accounts-service")
 const express = require("express");
 const logger = require("../logger");
-const jwt = require("jsonwebtoken");
+
 
 
 const accountsRouter = express.Router();
@@ -60,19 +60,9 @@ accountsRouter
             error: { message: `Auth failed`},
           })
         }
-        const token = jwt.sign(
-          {username: username,
-          password: password
-        },
-          process.env.JWT_KEY,
-          {
-            expiresIn: "1h"
-          }
-        );
-      
         res.status(201).json({
+          account,
           message: "Auth successful",
-          token: token,
         })
       })
       .catch(next)
@@ -88,5 +78,5 @@ accountsRouter
       .catch(next)
   })
 
-  
+
   module.exports = accountsRouter
