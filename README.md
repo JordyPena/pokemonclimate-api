@@ -16,13 +16,25 @@ Fullstack app using React.js, CSS, Node, Express, and PostgreSQL.
 
 ## API 
 
-Pokemon Climate API fetches existing accounts in the database and allows users to create new accounts.
+Pokemon Climate API endpoints GET /api/accounts/account to login into a existing account. GET /api/account returns all accounts. POST /api/accounts creates a new account to gain access to Pokemon Climate.
 
-Endpoints: 
+## Endpoints
 
-GET /api/accounts/account logs into account, req.body req.body needs username and password
+## GET /api/accounts/account
+ Parameters -- username & password
+ Type -- string 
+ In -- body both username & password are required
+ Default response -- Status: 201 Auth Successful 
+ Requires authentication -- Status: 401 Auth failed
 
-GET /api/accounts  returns all accounts
+## GET /api/accounts -- returns all accounts.
+ Parameters -- none
+ Default response -- Status: 200 ok
 
-POST /api/accounts  creates a new account, req.body needs username and password
-
+## POST /api/accounts -- creates a new account.
+ Parameters -- username & password
+ Type -- string
+ In -- body both username & password are required
+ Bad request -- Status: 400 Request body must contain both 'username' and 'password'
+ Requires Authentication -- Status: 401 User already exists, try signing in
+ Default response -- Status: 201 Account created
