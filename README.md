@@ -8,7 +8,7 @@ https://pokemonclimate-client.vercel.app/login
 
 ## Summary
 
-Pokemon Climate allows kids to explore their interest in meteorology by looking for different climates in the US, using pokemon to make it fun. In the search bar type in the name of a city, you will get the current weather of that city along with a pokemon sprite to demonstrate pokemon that could be found in that environment. Must be 13+ years old to use, and must create an account before you can use Pokemon Climate.
+Pokemon Climate allows kids to explore their interest in meteorology by looking for different climates in the US, using pokemon to make it fun. In the search bar type in the name of a city, you will get the current weather of that city along with a pokemon sprite to demonstrate pokemon that could be found in that environment. Must create an account before you can use Pokemon Climate.
 
 ## Environment 
 
