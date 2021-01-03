@@ -1,26 +1,28 @@
-# Express Boilerplate!
+# Pokemon Climate
 
-This is a boilerplate project used for starting new projects!
+## Live link 
 
-## Set up
+https://pokemonclimate-client.vercel.app/login
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+![Screenshot](https://github.com/JordyPena/Portfolio/blob/main/images/project-screenshots/PokemonClimate.png)
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+## Summary
 
-## Scripts
+Pokemon Climate allows kids to explore their interest in meteorology by looking for different climates in the US, using pokemon to make it fun. In the search bar type in the name of a city, you will get the current weather of that city along with a pokemon sprite to demonstrate pokemon that could be found in that environment. Must be 13+ years old to use, and must create an account before you can use Pokemon Climate.
 
-Start the application `npm start`
+## Environment 
 
-Start nodemon for the application `npm run dev`
+Fullstack app using React.js, CSS, Node, Express, and PostgreSQL.
 
-Run the tests `npm test`
+## API 
 
-## Deploying
+Pokemon Climate API fetches existing accounts in the database and allows users to create new accounts.
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+Endpoints: 
+
+GET /api/accounts/account logs into account, req.body req.body needs username and password
+
+GET /api/accounts  returns all accounts
+
+POST /api/accounts  creates a new account, req.body needs username and password
+
