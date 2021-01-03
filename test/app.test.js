@@ -5,7 +5,7 @@ const request = supertest("http://localhost:7000");
 describe("GET /api/accounts", () => {
   it("should GET all accounts", () => {
     request.get("/api/accounts").expect(200, (error) => {
-      console.log(error);
+      console.error(error);
     });
   });
 });
