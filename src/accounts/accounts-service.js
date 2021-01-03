@@ -1,5 +1,3 @@
-
-
 const AccountsService = {
   addAccount(db, newAccount) {
     //function that will create a new user
@@ -44,8 +42,6 @@ const AccountsService = {
       })
       .delete();
   },
-
-  
 };
 
 module.exports = AccountsService;
