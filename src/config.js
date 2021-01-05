@@ -6,4 +6,5 @@ module.exports = {
     process.env.DATABASE_URL || "postgresql://postgres@localhost/pokemon",
   TEST_DATABASE_URL:
     process.env.TEST_DATABASE_URL || "postgresql://postgres@localhost/pokemon",
+  JWT_SECRET: process.env.JWT_SECRET || "secret",
 };

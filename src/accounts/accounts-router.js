@@ -1,7 +1,6 @@
 const AccountsService = require("./accounts-service");
 const express = require("express");
 const logger = require("../logger");
-
 const accountsRouter = express.Router();
 
 const jsonParser = express.json();
@@ -56,9 +55,10 @@ accountsRouter
             error: { message: `Auth failed` },
           });
         }
-        res.status(201).json({
-          account,
-          message: "Auth successful",
+        const subject = account.username;
+        const payload = { user_id: account.id };
+        res.send({
+          authToken: AccountsService.createJwt(subject, payload),
         });
       })
       .catch(next);
